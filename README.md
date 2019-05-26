@@ -7,24 +7,19 @@
 - Linting Solidity and Javascript files
 - Commit hooks for Linting and Prettify
 
-TODO:
-
+## TODO:
+- Coverage
 - Deploy
+- Add Manticore
+- Evaluate to add Slither
 - Switch to Jest
 - Publish the ABI files
 
 ## Requirements
 
 - yarn
-
-Mac
-
-    brew install yarn
-    yarn install
-
-Win
-
-https://yarnpkg.com/lang/en/docs/install/#windows-tab
+  - Mac: `brew install yarn`
+  - Win: https://yarnpkg.com/lang/en/docs/install/#windows-tab
 
 ## Optional tool
 
