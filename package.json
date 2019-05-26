@@ -1,0 +1,51 @@
+{
+  "name": "blockadvisor-smart-contracts",
+  "version": "0.0.1",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "nodemon -e js,sol --watch contracts --watch test --exec truffle test",
+    "test": "truffle test",
+    "lint": "solium -d contracts && eslint test",
+    "build": "rimraf build && yarn lint && yarn test",
+    "prettify": "prettier --write test/**.*js contracts/**.*.sol",
+    "truffle:migrate": "truffle migrate"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.{json,md,js,ts}": [
+        "prettier --write",
+        "eslint",
+        "git add"
+      ],
+      "**/*.sol": [
+        "prettier --write",
+        "solium -f",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "package.json"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "ethlint": "^1.2.4",
+    "ganache-cli": "^6.4.3",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.17.1",
+    "prettier-plugin-solidity": "^1.0.0-alpha.22",
+    "rimraf": "^2.6.3",
+    "truffle": "^5.0.19"
+  }
+}
