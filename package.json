@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon -e js,sol --watch contracts --watch test --exec truffle test",
     "test": "truffle test",
-    "lint": "solium -d contracts && eslint test",
+    "lint": "solium --fix -d contracts && eslint test",
     "build": "rimraf build && yarn lint && yarn test",
     "prettify": "prettier --write test/**.*js contracts/**.*.sol README.md",
     "truffle:migrate": "truffle migrate"
