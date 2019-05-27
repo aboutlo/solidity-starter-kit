@@ -37,4 +37,10 @@
 
 ## Develop
 
+Start a ganache-cli instance
+
+    yarn ganache:start
+
+Start to modify the smart contracts (`./contracts`) and the tests (`.test`)
+
     yarn start
