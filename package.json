@@ -4,15 +4,19 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "yarn watch",
+    "start": "npm-run-all watch",
     "watch": "nodemon -e js,sol --watch contracts --watch test --exec truffle test",
-    "test": "truffle test",
+    "test": "npm-run-all truffle:test",
+    "clean": "rimraf build",
     "lint": "solium --fix -d contracts && eslint test",
-    "build": "rimraf build && yarn lint && yarn test",
+    "build": "npm-run-all clean lint test truffle:compile",
+    "deploy": "npm-run-all build truffle:migrate truffle:networks",
     "prettify": "prettier --write test/**.*js contracts/**.*.sol README.md",
     "ganache:start": "ganache-cli --deterministic -i 1558908147528",
-    "deploy": "npm-run-all --parallel ganache:start truffle:migrate",
-    "truffle:migrate": "truffle migrate"
+    "truffle:migrate": "truffle migrate",
+    "truffle:compile": "truffle compile",
+    "truffle:test": "truffle test",
+    "truffle:networks": "truffle networks"
   },
   "husky": {
     "hooks": {
