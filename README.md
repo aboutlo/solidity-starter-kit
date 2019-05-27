@@ -8,6 +8,7 @@
 - Commit hooks for Linting and Prettify
 
 ## TODO:
+
 - Coverage
 - Deploy
 - Add Manticore
@@ -19,7 +20,7 @@
 
 - yarn
   - Mac: `brew install yarn`
-  - Win: https://yarnpkg.com/lang/en/docs/install/#windows-tab
+  - Win: https://yarnpkg.com/latest.msi
 
 ## Optional tool
 
@@ -28,7 +29,7 @@
   - Win: https://github.com/coreybutler/nvm-windows
 - AVN (Automatic Switch to the Node version of the project)
   - Mac: https://github.com/wbyoung/avn
-  - Win: https://github.com/wbyoung/avn/issues/46#issuecomment-357673650 (never test it)
+  - Win: https://github.com/wbyoung/avn/issues/46#issuecomment-357673650 (not tested)
 
 ## Install
 
