@@ -8,7 +8,7 @@
     "test": "truffle test",
     "lint": "solium -d contracts && eslint test",
     "build": "rimraf build && yarn lint && yarn test",
-    "prettify": "prettier --write test/**.*js contracts/**.*.sol",
+    "prettify": "prettier --write test/**.*js contracts/**.*.sol README.md",
     "truffle:migrate": "truffle migrate"
   },
   "husky": {
