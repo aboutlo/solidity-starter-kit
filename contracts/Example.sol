@@ -9,7 +9,7 @@ contract Example {
     value = _value;
   }
 
-  function testBoom() internal {
+  function testBoom() internal pure {
     revert("Boom!");
   }
 }
