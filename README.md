@@ -3,15 +3,14 @@
 ## Features
 
 - Prettier for Solidity and Javascript files
-- Watch files
 - Linting Solidity and Javascript files
-- Commit hooks for Linting and Prettify
+- Watch files
+- GIT pre-commit hook for Linting and Prettify
 
 ## TODO:
 
 - Coverage
-- Deploy
-- Add Manticore
+- Add Manticore or Mythril
 - Evaluate to add Slither
 - Switch to Jest
 - Publish the ABI files
@@ -37,10 +36,14 @@
 
 ## Develop
 
-Start a ganache-cli instance
+Modify the smart contracts (`./contracts`) or the tests (`./test`)
 
-    yarn ganache:start
+    yarn watch
 
-Start to modify the smart contracts (`./contracts`) and the tests (`.test`)
+## Deploy
 
-    yarn start
+- Start a ganache-cli instance `yarn ganache:start`
+- Deploy the smart contracts `yarn deploy`
+- Take note of the new smart **contract address**
+- Copy ABI from `build/Example.json` to the client
+- Copy the **contract address** to initialize the contract factory in the client
