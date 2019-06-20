@@ -36,14 +36,58 @@
 
 ## Develop
 
+Start a ganache-cli instance
+
+    yarn ganache:start
+
 Modify the smart contracts (`./contracts`) or the tests (`./test`)
 
     yarn watch
 
-## Deploy
+Export ABI
 
-- Start a ganache-cli instance `yarn ganache:start`
-- Deploy the smart contracts `yarn deploy`
-- Take note of the new smart **contract address**
-- Copy ABI from `build/Example.json` to the client
-- Copy the **contract address** to initialize the contract factory in the client
+    yarn build
+
+Copy ABI from `build/Example.json` to the client
+
+## Deploy in Ropsten
+
+Set the below env variables (or add them in a `.env` file):
+
+```
+export ADMIN=0x0000000000000000001
+export INFURA_KEY=abc1**************************
+export MNEMONIC="mysecret words **********************"
+```
+
+MetaMask wallet:
+
+- switch to Ropstein network
+- click on "accounts" in the top right corner of Metamask
+- select "Import account"
+- enter private key
+
+Collect some ETH from a faucet:
+
+- <https://faucet.metamask.io/>
+
+Deploy the smart contracts:
+
+    yarn deploy:ropsten
+
+## Interact with a deployed smart contract
+
+Run the truffle console:
+
+    yarn truffle:ropsten:console
+
+## Retrieve more address test from the Mnemonic
+
+- Go to https://iancoleman.io/bip39/
+- Copy and paste our Mnemonic in the `BIP39 Mnemonic` field
+- Select Ethereum from the `coin` list
+- Double check that the derivation path is set to `BIP44`
+- Check in `Derived Addresses` there is one of our address
+- Copy a private key and import in Metamask or where you need
+
+**notice**: copy and past mnemonic online is bad practice. Do only for test mnemonics
