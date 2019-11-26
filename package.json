@@ -44,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "bignumber.js": "^9.0.0",
     "dotenv": "^8.0.0",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.3.0",
@@ -60,7 +61,6 @@
     "prettier-plugin-solidity": "^1.0.0-alpha.22",
     "rimraf": "^2.6.3",
     "truffle": "^5.0.20",
-    "truffle-hdwallet-provider": "^1.0.10",
-    "bignumber.js": "^9.0.0"
+    "truffle-hdwallet-provider": "^1.0.10"
   }
 }
