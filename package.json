@@ -18,6 +18,7 @@
     "truffle:migrate": "truffle migrate",
     "truffle:compile": "truffle compile",
     "truffle:test": "truffle test",
+    "truffle:version": "truffle version",
     "truffle:ropsten:migrate": "truffle migrate --network ropsten",
     "truffle:ropsten:console": "truffle console --network ropsten"
   },
